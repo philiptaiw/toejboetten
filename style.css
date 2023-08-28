@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+  margin-top: 92px;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 30px;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.kat_h1 {
+  text-align: center;
+  top: 9%;
+  left: 42%;
+  font-size: xxx-large;
+}
+
+.forside {
+  text-align: center;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.index_h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.index_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+  gap: 20px;
+  list-style-type: none;
+  margin-top: 30%;
+}
+
+.product_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.gridoversigt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product_image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product_image img {
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.product_image:hover img {
+  opacity: 0.7;
+}
+
+.product_image:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.overlay a {
+  text-decoration: none;
+  color: white;
+}
+
+.product_image:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.generel_h1 {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.productpage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
