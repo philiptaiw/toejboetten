@@ -66,6 +66,11 @@ a {
   grid-template-columns: 1fr 1fr;
 }
 
+.product_item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .product_image {
   position: relative;
   overflow: hidden;

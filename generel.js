@@ -15,7 +15,7 @@ function showProduct(product) {
   const copy = template.cloneNode(true);
 
   copy.querySelector;
-  copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+  copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
   copy.querySelector(".overlay").textContent = product.price;
   /* copy.querySelector(".alias").textContent = hero.alias;
   copy.querySelector(".origin").textContent = hero.origin;
