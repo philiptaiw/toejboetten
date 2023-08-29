@@ -1,5 +1,5 @@
 // fetche
-fetch("https://kea-alt-del.dk/t7/api/products/")
+fetch("https://kea-alt-del.dk/t7/api/products")
   .then((res) => res.json())
   .then(showProducts);
 
@@ -13,14 +13,25 @@ function showProduct(product) {
   // clone, ændre, appende
   const template = document.querySelector("template").content;
   const copy = template.cloneNode(true);
-
   copy.querySelector;
   copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
-  copy.querySelector(".overlay").textContent = product.price;
-  /* copy.querySelector(".alias").textContent = hero.alias;
-  copy.querySelector(".origin").textContent = hero.origin;
-  copy.querySelector(".month").textContent = hero.birthday.month;
-  copy.querySelector(".day").textContent = hero.birthday.day;*/
+  copy.querySelector(".overlay").textContent = product.productdisplayname;
+  if (product.discount > 0) {
+    //produktet er har rabat
+    copy.querySelector(".badge").classList.add("discount-badge");
+    copy.querySelector(".procent").textContent = product.discount;
+  } else {
+    copy.querySelector(".badge").remove();
+  }
+
+  if (product.soldout) {
+    //produktet er udsolgt
+    copy.querySelector(".soldout").classList.add("soldout-badge");
+  } else {
+    copy.querySelector(".soldout").remove();
+  }
+  copy.querySelector("span").textContent = product.price;
+  //   copy.querySelector("discount-badge").textContent = product.discount;
   const parent = document.querySelector(".product_item");
   parent.appendChild(copy);
 }
