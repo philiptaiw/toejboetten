@@ -11,6 +11,7 @@ function showProduct(product) {
   document.querySelector(".producttitle h2").textContent = product.productdisplayname;
   document.querySelector(".brand").textContent = product.brandname;
   document.querySelector(".category").textContent = product.subcategory;
+  document.querySelector(".price").textContent = product.price;
   document.querySelector(".description").innerHTML = product.description;
   document.querySelector("b").innerHTML = product.styledesc;
   document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
