@@ -16,6 +16,7 @@ function showProduct(product) {
   copy.querySelector;
   copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
   copy.querySelector(".overlay").textContent = product.productdisplayname;
+  copy.querySelector(".semere").href = `produkt.html?id=${product.id}`;
   if (product.discount > 0) {
     //produktet er har rabat
     copy.querySelector(".badge").classList.add("discount-badge");
